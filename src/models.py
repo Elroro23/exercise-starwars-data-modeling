@@ -17,7 +17,7 @@ class User(Base):
     
 
 class Characters(Base):
-    __tablename__ = 'characters'
+    __tablename__ = 'characters' #No hace falta relacionar User con Characters directamente ya que se relacionan indirectamente en las tablas Favorites.
     character_id = Column(Integer, primary_key=True)
     name = Column(String(20), nullable=False)
     specie = Column(String(20), nullable=False)
